@@ -2,10 +2,108 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dek Morton Studio</title>
+    <!-- AdSense Auto Ads Script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601" crossorigin="anonymous"></script>
-    <meta http-equiv="refresh" content="0; url=https://dekv10-morton.github.io/math/">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p.subtitle {
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #f1f5f9;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+        footer {
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="container">
+        <h1>Dek Morton Studio</h1>
+        <p class="subtitle">คลังสื่อการเรียนรู้และโปรแกรมคำนวณออนไลน์</p>
+
+        <div class="grid">
+            <!-- การ์ดเชื่อมไปยังโปรเจกต์ Math -->
+            <a href="./math/" class="card">
+                <h2>📐 Math Portal</h2>
+                <p>แบบฝึกหัดและเครื่องมือคำนวณคณิตศาสตร์ ม.ต้น (ตั้งหารสังเคราะห์, แยกตัวประกอบ)</p>
+            </a>
+
+            <!-- การ์ดเชื่อมไปยังโปรเจกต์ Physics -->
+            <a href="./physics-hub/" class="card">
+                <h2>⚡ Physics Hub</h2>
+                <p>สูตรคำนวณฟิสิกส์ ม.2 - ม.6 ครบทุกหมวดหมู่ เข้าใจง่าย</p>
+            </a>
+
+            <!-- คุณสามารถมาเพิ่มการ์ดโปรเจกต์ใหม่ๆ ตรงนี้ในอนาคตได้เลย -->
+        </div>
+
+        <footer>
+            &copy; Dek Morton Studio. All rights reserved.
+        </footer>
+    </div>
+
 </body>
 </html>
