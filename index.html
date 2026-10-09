@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dek Morton Studio</title>
     <!-- AdSense Auto Ads Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9860314229138601"
+        crossorigin="anonymous"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -13,6 +15,7 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
             background-color: #0f172a;
             color: #f8fafc;
@@ -23,11 +26,13 @@
             min-height: 100vh;
             padding: 20px;
         }
+
         .container {
             text-align: center;
             max-width: 800px;
             width: 100%;
         }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
@@ -35,16 +40,22 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+
         p.subtitle {
             color: #94a3b8;
             margin-bottom: 40px;
             font-size: 1.1rem;
         }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            max-width: 800px;
+            /* ปรับความกว้างรวมของกริดให้พอดีกับ 2 การ์ด */
+            margin: 0 auto;
         }
+
         .card {
             background: #1e293b;
             border: 1px solid #334155;
@@ -57,20 +68,24 @@
             flex-direction: column;
             align-items: center;
         }
+
         .card:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
         }
+
         .card h2 {
             font-size: 1.4rem;
             margin-bottom: 10px;
             color: #f1f5f9;
         }
+
         .card p {
             font-size: 0.95rem;
             color: #94a3b8;
             line-height: 1.4;
         }
+
         footer {
             margin-top: 50px;
             color: #64748b;
@@ -78,11 +93,12 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <h1>Dek Morton Studio</h1>
-        <p class="subtitle">มาตรฐานใหม่..เด็กไทยมอต้น</p>
+        <p class="subtitle">มาตรฐานใหม่..เด็กไทย ม.ต้น</p>
 
         <div class="grid">
             <!-- การ์ดเชื่อมไปยังโปรเจกต์ Math -->
@@ -97,6 +113,18 @@
                 <p>สูตรคำนวณฟิสิกส์ ม.2 ครบทุกหมวดหมู่ เข้าใจง่าย</p>
             </a>
 
+            <!-- การ์ดเชื่อมไปยังโปรเจกต์ภาษาอังกฤษ -->
+            <a href="./english/" class="card">
+                <h2>📚 English Portal</h2>
+                <p>เนื้อหาภาษาอังกฤษ ม.ต้น</p>
+            </a>
+
+            <!-- การ์ดเชื่อมไปยังโปรเจกต์ฝึกแต่งประโยค -->
+            <a href="./Sentence-builder/" class="card">
+                <h2>✍️ Sentence Builder</h2>
+                <p>ฝึกทักษะการเรียบเรียงและแต่งประโยคภาษาอังกฤษ Basic-IELTS</p>
+            </a>
+
             <!-- คุณสามารถมาเพิ่มการ์ดโปรเจกต์ใหม่ๆ ตรงนี้ในอนาคตได้เลย -->
         </div>
 
@@ -106,4 +134,5 @@
     </div>
 
 </body>
+
 </html>
