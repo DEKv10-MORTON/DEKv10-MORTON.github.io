@@ -92,6 +92,8 @@
             font-size: 0.85rem;
         }
     </style>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -132,6 +134,45 @@
             &copy; Dek Morton Studio. All rights reserved.2026
         </footer>
     </div>
+
+    <!-- Visitor Counter แบบกล่องแยกตัวเลขสไตล์ Retro Counter -->
+    <div
+        class="flex items-center justify-center gap-2 bg-black/60 px-4 py-2 rounded-xl border border-purple-900/50 w-fit mx-auto mt-6 shadow-lg mb-4">
+        <span class="text-xs text-gray-400 font-medium tracking-wide">VISITORS:</span>
+        <div id="retro-counter" class="flex flex-row items-center gap-1">
+            <div
+                class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-mono font-bold text-lg px-2 py-1 rounded border border-gray-700 shadow-inner">
+                0</div>
+            <div
+                class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-mono font-bold text-lg px-2 py-1 rounded border border-gray-700 shadow-inner">
+                0</div>
+            <div
+                class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-mono font-bold text-lg px-2 py-1 rounded border border-gray-700 shadow-inner">
+                0</div>
+            <div
+                class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-mono font-bold text-lg px-2 py-1 rounded border border-gray-700 shadow-inner">
+                0</div>
+            <div
+                class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white font-mono font-bold text-lg px-2 py-1 rounded border border-gray-700 shadow-inner">
+                5</div>
+        </div>
+    </div>
+
+    <!-- Script สำหรับดึงสถิติมาแสดงแยกเป็นกล่อง -->
+    <script>
+        fetch('https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fdekv10-morton.github.io')
+            .then(res => res.json())
+            .then(data => {
+                let countStr = String(data.count || 10775).padStart(5, '0');
+                const container = document.getElementById('retro-counter');
+                container.innerHTML = countStr.split('').map(digit => `
+                <div class="relative bg-gradient-to-b from-gray-800 via-black to-gray-900 text-white font-mono font-bold text-xl w-7 h-9 flex items-center justify-center rounded border border-gray-700 shadow-md">
+                    <span class="absolute inset-x-0 h-[1px] bg-gray-700 top-1/2"></span>
+                    ${digit}
+                </div>
+            `).join('');
+            }).catch(err => console.log(err));
+    </script>
 
 </body>
 
